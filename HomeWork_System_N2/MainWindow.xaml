@@ -1,0 +1,23 @@
+﻿<Window x:Class="HomeWork_System_N2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HomeWork_System_N2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <ScrollViewer>
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Выбранное приложение: "/>
+                <TextBlock x:Name="ProcName" Width="300"/>
+                <Button x:Name="Start_stop_btn" Content="Не выбрано" IsEnabled="false" Click="Start_stop_btn_Click"/>
+                <Button x:Name="Info_btn" Content="Info" IsEnabled="False" Click="Info_btn_click"/>
+            </StackPanel>
+            <ComboBox x:Name="ComboBox" SelectionChanged="ComboBox_SelectionChanged"/>
+            <StackPanel>
+                <ListBox x:Name="ProcessList" SelectionChanged="ProcessList_SelectionChanged"/>
+            </StackPanel>
+        </StackPanel>
+    </ScrollViewer>
+</Window>
